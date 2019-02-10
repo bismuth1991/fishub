@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { NavLink, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import Navbar from './Navbar';
 
@@ -16,18 +16,21 @@ describe('Navbar', () => {
     });
 
     it('includes link to Baits', () => {
-      const link = wrapper.find(NavLink).at(0);
-      expect(link.html()).toBe('<a href="#/baits">Baits</a>');
+      expect(wrapper.containsMatchingElement(
+        <a href="#/baits">Baits</a>,
+      )).toBe(true);
     });
 
     it('includes link to Tackle Box', () => {
-      const link = wrapper.find(NavLink).at(1);
-      expect(link.html()).toBe('<a href="#/tackle-box">Tackle Box</a>');
+      expect(wrapper.containsMatchingElement(
+        <a href="#/tackle-box">Tackle Box</a>,
+      )).toBe(true);
     });
 
     it('includes link to Activities', () => {
-      const link = wrapper.find(NavLink).at(2);
-      expect(link.html()).toBe('<a href="#/activities">Activities</a>');
+      expect(wrapper.containsMatchingElement(
+        <a href="#/activities">Activities</a>,
+      )).toBe(true);
     });
   });
 });

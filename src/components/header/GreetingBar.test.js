@@ -31,13 +31,15 @@ describe('GreetingBar', () => {
     });
 
     it('includes link to Log In', () => {
-      const link = wrapper.find(Link).at(0);
-      expect(link.html()).toBe('<a href="#/login">Log In</a>');
+      expect(wrapper.containsMatchingElement(
+        <a href="#/login">Log In</a>,
+      )).toBe(true);
     });
 
     it('includes link to Sign Up', () => {
-      const link = wrapper.find(Link).at(1);
-      expect(link.html()).toBe('<a href="#/signup">Sign Up</a>');
+      expect(wrapper.containsMatchingElement(
+        <a href="#/signup">Sign Up</a>,
+      )).toBe(true);
     });
   });
 
