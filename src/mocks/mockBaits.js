@@ -1,4 +1,4 @@
-const baits = {
+const mockBaits = {
   1: {
     id: 1,
     name: 'Fat Rap',
@@ -55,4 +55,4 @@ const baits = {
   },
 };
 
-export default baits;
+export default mockBaits;

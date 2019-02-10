@@ -1,5 +1,5 @@
 import { getAllBaits } from './baits';
-import mockState from '../store/mockState';
+import mockState from '../mocks/mockState';
 
 describe('getAllBaits', () => {
   it('returns an array of baits', () => {
