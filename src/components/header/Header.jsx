@@ -4,12 +4,13 @@ import NavBar from './NavBar';
 import Logo from './Logo';
 import GreetingBar from './GreetingBar';
 
-const Header = props => (
+const Header = () => (
   <>
     <GreetingBar />
     <Logo />
     <NavBar />
   </>
 );
+
 
 export default Header;

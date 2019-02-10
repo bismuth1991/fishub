@@ -5,10 +5,11 @@ import { HashRouter, Link } from 'react-router-dom';
 import GreetingBar from './GreetingBar';
 
 describe('GreetingBar', () => {
+  const logOut = jest.fn();
   const props = {
     username: 'Bismuth',
     isAuthenticated: false,
-    logOut: () => {},
+    logOut,
   };
 
   it('renders without crashing', () => {
@@ -42,7 +43,6 @@ describe('GreetingBar', () => {
 
   describe('Logged in', () => {
     let wrapper;
-    const logOut = jest.fn();
 
     beforeEach(() => {
       wrapper = mount(
