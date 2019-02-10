@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Header from './header/Header';
+
 const App = () => (
-  <h1>Welcome to FisHub!</h1>
+  <Header />
 );
 
 export default App;
