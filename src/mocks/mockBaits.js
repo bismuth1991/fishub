@@ -1,4 +1,4 @@
-const mockBaits = {
+export const mockBaits = {
   1: {
     id: 1,
     name: 'Fat Rap',
@@ -55,4 +55,4 @@ const mockBaits = {
   },
 };
 
-export default mockBaits;
+export const mockBaitsArray = Object.values(mockBaits);

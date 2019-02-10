@@ -1,8 +1,8 @@
-import baits from './mockBaits';
+import { mockBaits } from './mockBaits';
 
 const mockState = {
   entities: {
-    baits,
+    mockBaits,
   },
 };
 

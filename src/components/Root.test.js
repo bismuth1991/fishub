@@ -4,10 +4,10 @@ import configureStore from 'redux-mock-store';
 
 import Root from './root';
 
-const middlewares = [];
-const mockStore = configureStore(middlewares);
-
 xit('renders without crashing', () => {
+  const middlewares = [];
+  const mockStore = configureStore(middlewares);
+
   const div = document.createElement('div');
   const store = mockStore();
 
