@@ -8,6 +8,12 @@ const NavBar = () => (
         <li className="nav-item">
           <Link to="/baits">Baits</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/tackle-box">Tackle Box</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/activities">Activities</Link>
+        </li>
       </ul>
     </div>
   </nav>

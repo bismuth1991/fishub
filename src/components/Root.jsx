@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import { instanceOf } from 'prop-types';
 
-import App from './app';
+import App from './App';
 
 const Root = ({ store }) => (
   <Provider store={store}>
