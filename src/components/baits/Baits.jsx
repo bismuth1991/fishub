@@ -4,7 +4,15 @@ import { arrayOf, shape, bool, string } from 'prop-types';
 import BaitItem from './BaitItem';
 
 class Baits extends React.Component {
-  conponentDidUpdate() {}
+  constructor() {
+    super();
+
+    this.addToTackleBox = this.addToTackleBox.bind(this);
+  }
+
+  addToTackleBox(baitId) {
+    return () => this.baits === baitId;
+  }
 
   render() {
     const { baits, isLoading } = this.props;
@@ -18,9 +26,15 @@ class Baits extends React.Component {
     ) : (
       <div className="container">
         <ul className="row">
-          <li className="col-md-4">
-            {baits.map(bait => <BaitItem key={bait.id} />)}
-          </li>
+          {baits.map(bait => (
+            <li className="col-md-4">
+              <BaitItem
+                key={bait.id}
+                {...bait}
+                addToTackleBox={this.addToTackleBox}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     );
