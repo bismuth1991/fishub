@@ -9,16 +9,13 @@ class Baits extends React.Component {
   render() {
     const { baits, isLoading } = this.props;
 
-    if (isLoading) {
-      return (
-        <div className="container">
-          <div className="spinner">
-            <i className="fas fa-spinner fa-spin" />
-          </div>
+    return isLoading ? (
+      <div className="container">
+        <div className="spinner">
+          <i className="fas fa-spinner fa-spin" />
         </div>
-      );
-    }
-    return (
+      </div>
+    ) : (
       <div className="container">
         <ul className="row">
           <li className="col-md-4">
