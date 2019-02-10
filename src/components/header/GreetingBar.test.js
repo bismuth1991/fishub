@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { HashRouter, NavLink } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 
 import GreetingBar from './GreetingBar';
 
@@ -21,14 +21,22 @@ describe('GreetingBar', () => {
       wrapper = mount(<HashRouter><GreetingBar {...props} /></HashRouter>);
     });
 
+    it('should not display user\'s username', () => {
+      expect(wrapper.contains('Bismuth')).toBe(false);
+    });
+
+    it('should not display Sign Out button', () => {
+      expect(wrapper.contains('Sign Out')).toBe(false);
+    });
+
     it('includes link to Log In', () => {
-      const link = wrapper.find(NavLink).at(0);
+      const link = wrapper.find(Link).at(0);
       expect(link.html()).toBe('<a href="#/login">Log In</a>');
     });
 
     it('includes link to Sign Up', () => {
-      const link = wrapper.find(NavLink).at(1);
-      expect(link.html()).toBe('<a href="#/signup">Signup</a>');
+      const link = wrapper.find(Link).at(1);
+      expect(link.html()).toBe('<a href="#/signup">Sign Up</a>');
     });
   });
 
@@ -44,16 +52,20 @@ describe('GreetingBar', () => {
       );
     });
 
+    it('should not display link to Log In and Sign Up', () => {
+      expect(wrapper.find(Link)).toHaveLength(0);
+    });
+
     it('display user\'s username', () => {
       expect(wrapper.contains('Bismuth')).toBe(true);
     });
 
-    it('includes link/button to Log Out', () => {
-      expect(wrapper.contains('Log Out')).toBe(true);
+    it('includes button to Sign Out', () => {
+      expect(wrapper.contains('Sign Out')).toBe(true);
     });
 
-    it('calls logout() when user clicks Log Out link/button', () => {
-      wrapper.find('Log Out').simulate('click');
+    it('calls logOut() when user clicks Sign Out button', () => {
+      wrapper.find('button').simulate('click');
       expect(logOut).toBeCalled();
     });
   });

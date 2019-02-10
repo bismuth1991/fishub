@@ -9,6 +9,13 @@ a {
   color: $blue-accent-color;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 // Card
 
 .card {
