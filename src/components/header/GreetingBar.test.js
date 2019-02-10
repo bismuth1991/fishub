@@ -8,6 +8,7 @@ describe('GreetingBar', () => {
   const props = {
     username: 'Bismuth',
     isAuthenticated: false,
+    logOut: () => {},
   };
 
   it('renders without crashing', () => {
@@ -33,10 +34,12 @@ describe('GreetingBar', () => {
 
   describe('Logged in', () => {
     let wrapper;
+    const logOut = jest.fn();
+
     beforeEach(() => {
-      wrapper = shallow(
+      wrapper = mount(
         <HashRouter>
-          <GreetingBar username="Bismuth" isAuthenticated />
+          <GreetingBar username="Bismuth" isAuthenticated logOut={logOut} />
         </HashRouter>,
       );
     });
@@ -47,6 +50,11 @@ describe('GreetingBar', () => {
 
     it('includes link/button to Log Out', () => {
       expect(wrapper.contains('Log Out')).toBe(true);
+    });
+
+    it('calls logout() when user clicks Log Out link/button', () => {
+      wrapper.find('Log Out').simulate('click');
+      expect(logOut).toBeCalled();
     });
   });
 });
