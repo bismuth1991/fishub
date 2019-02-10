@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 
-const entitiesReducer = combineReducers({
+import tackleBoxReducer from './tackleBoxReducer';
+import baitsReducer from './baitsReducer';
 
+const entitiesReducer = combineReducers({
+  baits: baitsReducer,
+  tackleBox: tackleBoxReducer,
 });
 
 export default entitiesReducer;
