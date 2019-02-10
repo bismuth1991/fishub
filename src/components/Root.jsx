@@ -5,6 +5,8 @@ import { instanceOf } from 'prop-types';
 
 import App from './App';
 
+import '../assets/css/index.scss';
+
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
