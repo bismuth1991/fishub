@@ -2,7 +2,7 @@ import { mockBaits } from './mockBaits';
 
 const mockState = {
   entities: {
-    mockBaits,
+    baits: mockBaits,
   },
 };
 
