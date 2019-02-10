@@ -1,9 +1,9 @@
 import baits from './baits';
 
-const preLoadedState = {
+const mockState = {
   entities: {
     baits,
   },
 };
 
-export default preLoadedState;
+export default mockState;

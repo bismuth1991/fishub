@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import configureStore from './store/store';
-import preloadedState from './store/preloadedState';
+import preloadedState from './store/mockState';
 
 import Root from './components/Root';
 
