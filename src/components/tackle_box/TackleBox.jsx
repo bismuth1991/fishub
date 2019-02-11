@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { arrayOf, shape, string, bool } from 'prop-types';
 
 import EmptyTackleBox from './EmptyTackleBox';
 import LeftPanel from './LeftPanel';
 
-class TackleBox extends React.Component {
+export class TackleBox extends React.Component {
   constructor(props) {
     super(props);
 
@@ -50,4 +51,8 @@ TackleBox.propTypes = {
   })).isRequired,
 };
 
-export default TackleBox;
+const mapStateToProps = state => ({
+
+});
+
+export default connect(mapStateToProps, null)(TackleBox);
