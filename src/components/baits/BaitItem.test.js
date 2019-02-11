@@ -24,16 +24,16 @@ describe('BaitItem', () => {
     beforeEach(() => { wrapper = shallow(<BaitItem {...props} />); });
 
     it('displays the bait\'s name', () => {
-      expect(wrapper.contains('Fat Rap')).toBe(true);
+      expect(wrapper.contains(props.name)).toBe(true);
     });
 
     it('displays the bait\'s type', () => {
-      expect(wrapper.contains('Crankbait')).toBe(true);
+      expect(wrapper.contains(props.category)).toBe(true);
     });
 
     it('displays the bait\'s image', () => {
       expect(wrapper.containsMatchingElement(
-        <img src="fat-rap.png" alt="Fat Rap" />,
+        <img src={props.image} alt={props.name} />,
       )).toBe(true);
     });
   });

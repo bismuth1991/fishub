@@ -23,7 +23,7 @@ describe('GreetingBar', () => {
     });
 
     it('should not display user\'s username', () => {
-      expect(wrapper.contains('Bismuth')).toBe(false);
+      expect(wrapper.contains(props.username)).toBe(false);
     });
 
     it('should not display Sign Out button', () => {
@@ -59,7 +59,7 @@ describe('GreetingBar', () => {
     });
 
     it('display user\'s username', () => {
-      expect(wrapper.contains('Bismuth')).toBe(true);
+      expect(wrapper.contains(props.username)).toBe(true);
     });
 
     it('includes button to Sign Out', () => {
