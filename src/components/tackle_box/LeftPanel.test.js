@@ -5,6 +5,7 @@ import LeftPanel from './LeftPanel';
 
 describe('LeftPanel', () => {
   jest.mock('./LeftPanelItem', () => 'LeftPanelItem');
+  const switchBait = jest.fn();
   const props = {
     baits: [
       {
@@ -21,6 +22,7 @@ describe('LeftPanel', () => {
       },
     ],
     selectedBaitId: 4,
+    switchBait,
   };
 
   it('renders without crashing', () => {
@@ -37,5 +39,12 @@ describe('LeftPanel', () => {
 
     expect(wrapper.find('li').at(0).hasClass('selected')).toBe(false);
     expect(wrapper.find('li').at(1).hasClass('selected')).toBe(true);
+  });
+
+  it('call switchBait when bait\'s image is clicked', () => {
+    const wrapper = shallow(<LeftPanel {...props} />);
+    wrapper.find('li').at(0).simulate('click');
+
+    expect(switchBait).toBeCalledWith(1);
   });
 });
