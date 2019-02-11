@@ -34,15 +34,17 @@ export class TackleBox extends React.Component {
       <EmptyTackleBox />
     ) : (
       <div className="container-fluid">
-        <LeftPanel
-          baits={baits}
-          selectedBaitId={selectedBaitId}
-          switchBait={this.switchBait}
-        />
+        <div className="row">
+          <LeftPanel
+            baits={baits}
+            selectedBaitId={selectedBaitId}
+            switchBait={this.switchBait}
+          />
 
-        <TackleBoxItem
-          bait={baits.find(bait => bait.id === selectedBaitId)}
-        />
+          <TackleBoxItem
+            bait={baits.find(bait => bait.id === selectedBaitId)}
+          />
+        </div>
       </div>
     );
   }

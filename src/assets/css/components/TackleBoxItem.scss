@@ -1,0 +1,32 @@
+.card {
+  .card-header {
+    color: $primary-text-color;
+    border: 0;
+    margin-bottom: 15px;
+
+    h5 {
+      color: $nav-secondary-color;
+    }
+
+    img.bait {
+      width: 275px;
+      padding: 0 0.5rem;
+    }
+
+    .count,
+    .weight {
+      font-weight: 800;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .card-body {
+      padding-top: 3rem;
+    }
+  }
+}
