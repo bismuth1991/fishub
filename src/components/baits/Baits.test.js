@@ -24,6 +24,6 @@ describe('Baits', () => {
 
   it('display correct amount of BaitItems', () => {
     const wrapper = shallow(<Baits {...props} isLoading={false} />);
-    expect(wrapper.find('BaitItem')).toHaveLength(9);
+    expect(wrapper.find('BaitItem')).toHaveLength(props.baits.length);
   });
 });
