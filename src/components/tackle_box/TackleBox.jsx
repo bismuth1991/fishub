@@ -5,6 +5,7 @@ import { arrayOf, shape, string, bool } from 'prop-types';
 import EmptyTackleBox from './EmptyTackleBox';
 import LeftPanel from './LeftPanel';
 import { getBaitsInTackleBox, isTackleBoxEmpty } from '../../selectors/tackleBoxSelectors';
+import TackleBoxItem from './TackleBoxItem';
 
 export class TackleBox extends React.Component {
   constructor(props) {
@@ -37,6 +38,10 @@ export class TackleBox extends React.Component {
           baits={baits}
           selectedBaitId={selectedBaitId}
           switchBait={this.switchBait}
+        />
+
+        <TackleBoxItem
+          bait={baits.find(bait => bait.id === selectedBaitId)}
         />
       </div>
     );
