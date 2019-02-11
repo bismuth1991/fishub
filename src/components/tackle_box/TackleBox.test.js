@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import TackleBox from './TackleBox';
+import { TackleBox } from './TackleBox';
 import LeftPanel from './LeftPanel';
 
 describe('TackleBox', () => {

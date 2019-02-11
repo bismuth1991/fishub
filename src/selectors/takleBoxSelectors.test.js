@@ -35,7 +35,7 @@ describe('tackleBox selectors', () => {
 
   describe('getBaitsInTackleBox', () => {
     it('returns an array of baits', () => {
-      expect(getBaitsInTackleBox(mockState)).toEqual(baits);
+      expect(getBaitsInTackleBox(mockState)).toEqual(Object.values(baits));
     });
   });
 
