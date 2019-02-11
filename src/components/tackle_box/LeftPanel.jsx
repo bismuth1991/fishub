@@ -22,13 +22,17 @@ const LeftPanel = ({
   </ul>
 );
 
+LeftPanel.defaultProps = {
+  selectedBaitId: null,
+};
+
 LeftPanel.propTypes = {
   baits: arrayOf(shape({
     name: string,
     category: string,
     image: string,
   })).isRequired,
-  selectedBaitId: number.isRequired,
+  selectedBaitId: number,
   switchBait: func.isRequired,
 };
 

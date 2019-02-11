@@ -21,6 +21,7 @@ describe('TackleBox', () => {
         image: 'mr-mustache.png',
       },
     ],
+    isEmpty: false,
   };
   const initialState = {
     selectedBaitId: props.baits[0].id,
