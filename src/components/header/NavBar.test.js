@@ -1,10 +1,20 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import configureStore from 'redux-mock-store';
 import { HashRouter } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
+  const middlewares = [];
+  const initialState = {
+    entities: {
+      tackleBox: [],
+    },
+  };
+  const mockStore = configureStore(middlewares)(initialState);
+
   it('renders without crashing', () => {
     shallow(<Navbar />);
   });
@@ -12,7 +22,13 @@ describe('Navbar', () => {
   describe('Links', () => {
     let wrapper;
     beforeEach(() => {
-      wrapper = mount(<HashRouter><Navbar /></HashRouter>);
+      wrapper = mount(
+        <Provider store={mockStore}>
+          <HashRouter>
+            <Navbar />
+          </HashRouter>
+        </Provider>,
+      );
     });
 
     it('includes link to Baits', () => {

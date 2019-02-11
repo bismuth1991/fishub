@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import CounterBadgeContainer from './CounterBadge';
 
 const activeStyle = {
   borderBottom: '2px solid #94d31b',
@@ -25,6 +26,7 @@ const NavBar = () => (
           >
           Tackle Box
           </NavLink>
+          <CounterBadgeContainer />
         </li>
         <li className="nav-item">
           <NavLink
