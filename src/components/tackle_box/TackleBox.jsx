@@ -4,6 +4,7 @@ import { arrayOf, shape, string, bool } from 'prop-types';
 
 import EmptyTackleBox from './EmptyTackleBox';
 import LeftPanel from './LeftPanel';
+import { getBaitsInTackleBox, isTackleBoxEmpty } from '../../selectors/tackleBoxSelectors';
 
 export class TackleBox extends React.Component {
   constructor(props) {
@@ -52,7 +53,8 @@ TackleBox.propTypes = {
 };
 
 const mapStateToProps = state => ({
-
+  baits: getBaitsInTackleBox(state),
+  isEmpty: isTackleBoxEmpty(state),
 });
 
 export default connect(mapStateToProps, null)(TackleBox);
