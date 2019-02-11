@@ -20,7 +20,7 @@ describe('LeftPanel', () => {
         image: 'mr-mustache.png',
       },
     ],
-    selectedBaitId: undefined,
+    selectedBaitId: 4,
   };
 
   it('renders without crashing', () => {
@@ -32,15 +32,8 @@ describe('LeftPanel', () => {
     expect(wrapper.find('LeftPanelItem')).toHaveLength(props.baits.length);
   });
 
-  it('selects the first item initially', () => {
-    const wrapper = shallow(<LeftPanel {...props} />);
-
-    expect(wrapper.find('li').at(0).hasClass('selected')).toBe(true);
-    expect(wrapper.find('li').at(1).hasClass('selected')).toBe(false);
-  });
-
   it('selects item base on selectedBaitId prop', () => {
-    const wrapper = shallow(<LeftPanel {...props} selectedBaitId={4} />);
+    const wrapper = shallow(<LeftPanel {...props} />);
 
     expect(wrapper.find('li').at(0).hasClass('selected')).toBe(false);
     expect(wrapper.find('li').at(1).hasClass('selected')).toBe(true);
