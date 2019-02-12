@@ -4,6 +4,7 @@ const LengthInput = () => (
   <div className="col">
     <div className="input-group">
       <input
+        data-test="length-input"
         className="form-control"
         type="number"
       />
