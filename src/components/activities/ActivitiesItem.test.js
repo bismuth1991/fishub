@@ -5,7 +5,6 @@ import formatDate from '../../utils/formatDate';
 import ActivitiesItem from './ActivitiesItem';
 
 describe('ActivitiesItem', () => {
-  const fetchActivities = jest.fn();
   const props = {
     id: 1,
     species: 'Walleye',
@@ -15,7 +14,6 @@ describe('ActivitiesItem', () => {
     bait: 'Rooster Tail',
     image: 'https://rocky-ravine-50852.herokuapp.com/assets/rooster-tail-b743cf9cac616ed01eaaa4347dfacab8c410a342d0fa4cb7f565384e9040e16c.png',
     username: 'walleyewhisperer',
-    fetchActivities,
   };
 
   let wrapper;
@@ -36,7 +34,7 @@ describe('ActivitiesItem', () => {
   });
 
   it('should display the bait\'s image', () => {
-    expect(wrapper.contaisMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <img src={props.image} alt={props.bait} />,
     )).toBe(true);
   });
@@ -46,10 +44,14 @@ describe('ActivitiesItem', () => {
   });
 
   it('should display the catch\'s weight', () => {
-    expect(wrapper.contains(props.weight)).toBe(true);
+    expect(
+      wrapper.find('[test-data="weight"]').text().includes(props.weight),
+    ).toBe(true);
   });
 
   it('should display the catch\'s length', () => {
-    expect(wrapper.contains(props.length)).toBe(true);
+    expect(
+      wrapper.find('[test-data="length"]').text().includes(props.length),
+    ).toBe(true);
   });
 });
