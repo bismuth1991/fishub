@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 import formatDate from '../../utils/formatDate';
 
 const ActivitiesItem = ({
@@ -38,5 +39,15 @@ const ActivitiesItem = ({
     </div>
   </>
 );
+
+ActivitiesItem.propTypes = {
+  username: string.isRequired,
+  bait: string.isRequired,
+  image: string.isRequired,
+  species: string.isRequired,
+  weight: string.isRequired,
+  length: string.isRequired,
+  createdAt: string.isRequired,
+};
 
 export default ActivitiesItem;

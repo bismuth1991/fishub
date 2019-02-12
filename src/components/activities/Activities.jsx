@@ -1,4 +1,5 @@
 import React from 'react';
+import { func, bool, arrayOf, shape, string, number } from 'prop-types';
 
 import ActivitiesItem from './ActivitiesItem';
 
@@ -28,5 +29,20 @@ class Activities extends React.Component {
     );
   }
 }
+
+Activities.propTypes = {
+  fetchActivities: func.isRequired,
+  isLoading: bool.isRequired,
+  activities: arrayOf(shape({
+    id: number,
+    username: string,
+    bait: string,
+    image: string,
+    species: string,
+    weight: string,
+    length: string,
+    createdAt: string,
+  })).isRequired,
+};
 
 export default Activities;
