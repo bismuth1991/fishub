@@ -17,3 +17,5 @@ Errors.propTypes = {
   hasErrors: bool.isRequired,
   errors: arrayOf(string).isRequired,
 };
+
+export default Errors;

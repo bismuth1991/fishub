@@ -5,6 +5,7 @@ import SpeciesOptions from './SpeciesOptions';
 import WeightInput from './WeightInput';
 import LengthInput from './LengthInput';
 import SubmitButton from './SubmitButton';
+import Errors from './Errors';
 
 class CatchForm extends React.Component {
   constructor() {
@@ -42,21 +43,24 @@ class CatchForm extends React.Component {
     const { species, weight, length } = this.state;
 
     return (
-      <form className="container form-row" onSubmit={this.handleSubmit}>
-        <SpeciesOptions
-          species={species}
-          handleInputChange={this.handleInputChange}
-        />
-        <WeightInput
-          weight={weight}
-          handleInputChange={this.handleInputChange}
-        />
-        <LengthInput
-          length={length}
-          handleInputChange={this.handleInputChange}
-        />
-        <SubmitButton />
-      </form>
+      <>
+        <Errors />
+        <form className="container form-row" onSubmit={this.handleSubmit}>
+          <SpeciesOptions
+            species={species}
+            handleInputChange={this.handleInputChange}
+          />
+          <WeightInput
+            weight={weight}
+            handleInputChange={this.handleInputChange}
+          />
+          <LengthInput
+            length={length}
+            handleInputChange={this.handleInputChange}
+          />
+          <SubmitButton />
+        </form>
+      </>
     );
   }
 }
