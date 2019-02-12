@@ -29,6 +29,6 @@ describe('Activities', () => {
   it('should display correct amount of ActivitiesItem', () => {
     wrapper.setProps({ isLoading: false });
     expect(wrapper.find('[test-data="spinner"]')).toHaveLength(0);
-    expect(wrapper.find('ActivitiesItem')).toHaveLength(props.mockActivitesArray.length);
+    expect(wrapper.find('ActivitiesItem')).toHaveLength(props.activities.length);
   });
 });
