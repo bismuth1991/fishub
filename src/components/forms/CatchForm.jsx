@@ -1,4 +1,5 @@
 import React from 'react';
+import { func, number } from 'prop-types';
 
 import SpeciesOptions from './SpeciesOptions';
 import WeightInput from './WeightInput';
@@ -16,6 +17,7 @@ class CatchForm extends React.Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(type) {
@@ -26,11 +28,21 @@ class CatchForm extends React.Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const { species, weight, length } = this.state;
+    const { logCatch, baitId } = this.props;
+
+    const data = { catch: { species, weight, length } };
+    logCatch(baitId, data);
+  }
+
   render() {
     const { species, weight, length } = this.state;
 
     return (
-      <form className="container form-row">
+      <form className="container form-row" onSubmit={this.handleSubmit}>
         <SpeciesOptions
           species={species}
           handleInputChange={this.handleInputChange}
@@ -48,5 +60,10 @@ class CatchForm extends React.Component {
     );
   }
 }
+
+CatchForm.propTypes = {
+  logCatch: func.isRequired,
+  baitId: number.isRequired,
+};
 
 export default CatchForm;
