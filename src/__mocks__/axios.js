@@ -3,7 +3,7 @@ export default {
   defaults: {
     baseURL: '',
     xsrfCookieName: 'XSRF-TOKEN',
-    xsrfHeaderName: 'X-CSRF-Token',
+    xsrfHeaderName: 'X-XSRF-Token',
     withCredentials: false,
     headers: {
       post: {
