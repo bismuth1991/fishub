@@ -38,7 +38,7 @@ export default {
   createCatch(baitId, aCatch) {
     return axios.post(`/baits/${baitId}/catches`, aCatch);
   },
-  fetchActivity() {
+  fetchActivities() {
     return axios.get('/activity');
   },
   createSession(username, password) {

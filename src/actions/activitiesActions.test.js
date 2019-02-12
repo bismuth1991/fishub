@@ -6,7 +6,7 @@ import { mockActivities } from '../__mocks__/mockActivities';
 import {
   FETCH_ACTIVITIES_SUCCESS,
   fetchActivitiesSuccess,
-  fetchActivites,
+  fetchActivities,
 } from './activitiesActions';
 
 const payload = mockActivities;
@@ -29,13 +29,13 @@ describe('fetchActivities thunk action creator', () => {
     mockAxios.get.mockImplementationOnce(() => Promise.resolve({
       data: mockActivities,
     }));
-    await mockStore.dispatch(fetchActivites());
+    await mockStore.dispatch(fetchActivities());
   });
 
   it('should make call to the api at /activity', () => {
-    expect(mockAxios.get).toHaveBeenCalled(1);
+    expect(mockAxios.get).toHaveBeenCalledTimes(1);
     expect(mockAxios.get).toHaveBeenCalledWith('/activity');
-    mockStore.clearAcions();
+    mockStore.clearActions();
   });
 
   it('should dispatch fetchActivitiesSuccess action', () => {
