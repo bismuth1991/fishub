@@ -7,10 +7,12 @@ import Baits from './Baits';
 describe('Baits', () => {
   jest.mock('./BaitItem', () => 'BaitItem');
   const addBait = jest.fn();
+  const fetchBaits = jest.fn();
   const props = {
     baits: mockBaitsArray,
     isLoading: true,
     addBait,
+    fetchBaits,
   };
 
   it('renders without crashing', () => {

@@ -10,6 +10,11 @@ class Baits extends React.Component {
     this.addToTackleBox = this.addToTackleBox.bind(this);
   }
 
+  componentDidMount() {
+    const { fetchBaits } = this.props;
+    fetchBaits();
+  }
+
   addToTackleBox(baitId) {
     const { addBait } = this.props;
     return () => addBait(baitId);
@@ -50,6 +55,7 @@ Baits.propTypes = {
   isLoading: bool.isRequired,
   tackleBox: arrayOf(number),
   addBait: func.isRequired,
+  fetchBaits: func.isRequired,
   baits: arrayOf(shape({
     name: string,
     category: string,
