@@ -1,0 +1,10 @@
+.btn {
+  color: $blue-accent-color;
+  border-color: $blue-accent-color;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $green-accent-color;
+    color: white;
+  }
+}
