@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.API_URL || 'http://localhost:3000';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
 // `baseURL` is prepended to URLs passed to axios
 axios.defaults.baseURL = API_URL;
