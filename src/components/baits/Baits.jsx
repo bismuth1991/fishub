@@ -25,7 +25,7 @@ class Baits extends React.Component {
 
     return isLoading ? (
       <div className="container">
-        <div className="spinner">
+        <div className="spinner" test-data="spinner">
           <i className="fas fa-spinner fa-spin" />
         </div>
       </div>

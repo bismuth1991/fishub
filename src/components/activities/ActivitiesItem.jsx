@@ -8,13 +8,13 @@ const ActivitiesItem = ({
   species,
   weight,
   length,
-  created_at,
+  createdAt,
 }) => (
   <>
     <div className="card-header">
       <span className="username">{username}</span>
         logged a catch on
-      <span className="date">{formatDate(created_at)}</span>
+      <span className="date">{formatDate(createdAt)}</span>
     </div>
     <div className="card-body">
       <p className="card-text">
