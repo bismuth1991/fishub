@@ -10,6 +10,6 @@ describe('tackleBoxActions', () => {
       type: ADD_BAIT,
       baitId,
     };
-    expect(addBait(1)).toEqual(expectedAction);
+    expect(addBait(baitId)).toEqual(expectedAction);
   });
 });

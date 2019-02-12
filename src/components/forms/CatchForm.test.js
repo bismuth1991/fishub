@@ -65,7 +65,7 @@ describe('CatchForm', () => {
     });
   });
 
-  it('should display error(s) when insufficient input is given when submit form', () => {
+  xit('should display error(s) when insufficient input is given when submit form', () => {
     simulateSelect(wrapper, '');
     simulateLengthInput(wrapper, '');
     simulateWeightInput(wrapper, '');
