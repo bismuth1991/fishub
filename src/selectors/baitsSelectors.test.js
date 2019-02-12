@@ -1,5 +1,5 @@
 import { getAllBaits } from './baitsSelectors';
-import { mockBaitsArray, mockBaits } from '../mocks/mockBaits';
+import { mockBaitsArray, mockBaits } from '../__mocks__/mockBaits';
 
 describe('getAllBaits', () => {
   const mockState = {

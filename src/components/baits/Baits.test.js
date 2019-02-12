@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { mockBaitsArray } from '../../mocks/mockBaits';
+import { mockBaitsArray } from '../../__mocks__/mockBaits';
 import Baits from './Baits';
 
 describe('Baits', () => {
