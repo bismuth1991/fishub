@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 
-const sessionReducer = combineReducers({
+// const sessionReducer = combineReducers({
 
-});
+// });
 
-export default sessionReducer;
+// export default sessionReducer;

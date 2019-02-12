@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 
-const uiReducer = combineReducers({
+// const uiReducer = combineReducers({
 
-});
+// });
 
-export default uiReducer;
+// export default uiReducer;

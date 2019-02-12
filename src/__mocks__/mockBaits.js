@@ -17,42 +17,6 @@ export const mockBaits = {
     category: 'Spinner',
     image: 'fire-tiger.png',
   },
-  4: {
-    id: 4,
-    name: 'Mr. Mustache',
-    category: 'Popper',
-    image: 'mr-mustache.png',
-  },
-  5: {
-    id: 5,
-    name: 'Strike King',
-    category: 'Crankbait',
-    image: 'strike-king.png',
-  },
-  6: {
-    id: 6,
-    name: 'Rooster Tail',
-    category: 'Spinner',
-    image: 'rooster-tail.png',
-  },
-  7: {
-    id: 7,
-    name: 'Marabou Muddler',
-    category: 'Fly',
-    image: 'marabou-muddler.png',
-  },
-  8: {
-    id: 8,
-    name: 'Bucktail',
-    category: 'Jig',
-    image: 'bucktail.png',
-  },
-  9: {
-    id: 9,
-    name: 'Daredevil',
-    category: 'Spoon',
-    image: 'daredevil.png',
-  },
 };
 
 export const mockBaitsArray = Object.values(mockBaits);
