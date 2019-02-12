@@ -10,7 +10,7 @@ describe('baits reducer', () => {
   it('should handle FETCH_BAITS_SUCCESS', () => {
     expect(baitsReducer({}, {
       type: FETCH_BAITS_SUCCESS,
-      baits: mockBaits,
+      payload: mockBaits,
     })).toEqual(mockBaits);
   });
 });
