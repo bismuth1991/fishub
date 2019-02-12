@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom/Link';
+import { Link } from 'react-router-dom';
 import { number, string, bool, func } from 'prop-types';
 
 const BaitItem = ({

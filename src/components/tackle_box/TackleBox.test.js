@@ -27,25 +27,26 @@ describe('TackleBox', () => {
     selectedBaitId: props.baits[0].id,
   };
 
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<TackleBox {...props} />);
+  });
+
   it('renders without crashing', () => {
-    shallow(<TackleBox {...props} />);
+    expect(wrapper).toHaveLength(1);
   });
 
   it('has correct initial state', () => {
-    const wrapper = shallow(<TackleBox {...props} />);
     expect(wrapper.state()).toEqual(initialState);
   });
 
   it('has a LeftPanel component', () => {
-    const wrapper = shallow(<TackleBox {...props} />);
     expect(wrapper.find('LeftPanel')).toHaveLength(1);
   });
 
   describe('Handling click on LeftPanel\'s item', () => {
-    let wrapper;
     let secondItem;
     beforeEach(() => {
-      wrapper = shallow(<TackleBox {...props} />);
       secondItem = wrapper.find(LeftPanel).dive().find('li').at(1);
       secondItem.simulate('click');
       wrapper.update();

@@ -1,5 +1,6 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
+import CatchForm from '../forms/CatchForm';
 
 const TackleBoxItem = ({
   bait: {
@@ -10,7 +11,7 @@ const TackleBoxItem = ({
 }) => (
   <div id="selected-item" className="col-md-9">
     <div className="card">
-      <div className="card-header">
+      <figure className="card-header">
         <img
           className="bait"
           src={image}
@@ -23,14 +24,16 @@ const TackleBoxItem = ({
           {' '}
           lbs
         </h5>
-      </div>
+      </figure>
 
       <div className="card-body">
         <h4 className="card-title">{name}</h4>
         <h5 className="card-subtitle">{category}</h5>
       </div>
 
-      <div className="card-footer" />
+      <div className="card-footer">
+        <CatchForm />
+      </div>
     </div>
   </div>
 );
