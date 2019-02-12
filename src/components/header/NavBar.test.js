@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store';
 import { HashRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
-import Navbar from './Navbar';
+import Navbar from './NavBar';
 
 describe('Navbar', () => {
   const middlewares = [];

@@ -1,0 +1,30 @@
+.card--activities {
+  margin-bottom: 1.5rem;
+
+  .card-header {
+    color: $secondary-text-color;
+  }
+
+  .card-body {
+    font-size: 1.15rem;
+  }
+
+  img.bait {
+    margin-right: 10px;
+    width: 125px;
+  }
+
+  .species {
+    font-weight: 800;
+  }
+
+  .username {
+    font-weight: 600;
+  }
+
+  .weight,
+  .length {
+    font-weight: 600;
+    background: $brand-text-color;
+  }
+}

@@ -1,4 +1,4 @@
-import API from '../utils/api_utils';
+import API from '../utils/apiUtils';
 
 export const FETCH_BAITS_SUCCESS = 'FETCH_BAITS_SUCCESS';
 
