@@ -1,28 +1,31 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+import { HashRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm';
 
 describe('LoginForm', () => {
   const logIn = jest.fn();
   const props = {
     logIn,
+    hasError: false,
+    error: null,
   };
 
   const simulateUsernameInput = (wrapper, value) => {
-    wrapper.find('[data-test="username"]').simulateChange({
+    wrapper.find('[data-test="username"]').simulate('change', {
       target: { value },
     });
   };
   const simulatePasswordInput = (wrapper, value) => {
-    wrapper.find('[data-test="password"]').simulateChange({
+    wrapper.find('[data-test="password"]').simulate('change', {
       target: { value },
     });
   };
 
   let wrapper;
   beforeEach(() => {
-    wrapper = mount(<LoginForm {...props} />);
+    wrapper = mount(<HashRouter><LoginForm {...props} /></HashRouter>);
   });
 
   it('should render without crashing', () => {
@@ -30,21 +33,19 @@ describe('LoginForm', () => {
   });
 
   it('should have a username input field', () => {
-    expect(wrapper.hasMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <input data-test="username" />,
     )).toBe(true);
   });
 
   it('should have a password input field', () => {
-    expect(wrapper.hasMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <input data-test="password" />,
     )).toBe(true);
   });
 
   it('should have a button to login', () => {
-    expect(wrapper.hasMatchingElement(
-      <button type="submit" data-test="login" />,
-    )).toBe(true);
+    expect(wrapper.find('button[data-test="login"]')).toHaveLength(1);
   });
 
   it('should handle username input', () => {
@@ -70,11 +71,11 @@ describe('LoginForm', () => {
     });
   });
 
-  it('should display error messages with invalid username/password', () => {
-    simulateUsernameInput(wrapper, '');
-    simulatePasswordInput(wrapper, '');
-    wrapper.find('form').simulate('submit');
+  it('should display error message when appropriate', () => {
+    wrapper.setProps({
+      children: <LoginForm logIn={logIn} hasError error="Invalid Credentials" />,
+    });
 
-    expect(wrapper.find('[data-test="errrors"]')).toHaveLength(1);
+    expect(wrapper.contains('Invalid Credentials')).toBe(true);
   });
 });
