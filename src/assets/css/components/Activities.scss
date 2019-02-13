@@ -1,15 +1,16 @@
-.card--activities {
-  margin-bottom: 1.5rem;
+.activity {
+  display: block;
 
-  .card-header {
+  .activity-header {
     color: $secondary-text-color;
+    margin-bottom: 0;
   }
 
-  .card-body {
+  .activity-body {
     font-size: 1.15rem;
   }
 
-  img.bait {
+  .activity-img {
     margin-right: 10px;
     width: 125px;
   }

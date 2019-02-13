@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { number, string, bool, func } from 'prop-types';
 
+import '../../assets/css/components/Baits.scss';
+
 const BaitItem = ({
   id,
   name,

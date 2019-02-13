@@ -12,26 +12,26 @@ const ActivitiesItem = ({
   createdAt,
 }) => (
   <>
-    <div className="card-header">
+    <div className="card-header activity-header">
       <span className="username">{username}</span>
-        logged a catch on
+      <span> logged a catch on </span>
       <span className="date">{formatDate(createdAt)}</span>
     </div>
-    <div className="card-body">
+    <div className="card-body activity-body">
       <p className="card-text">
         <img
-          className="bait"
+          className="bait activity-img"
           src={image}
           alt={bait}
         />
         <span className="species">{species}</span>
 
-        <span> weighing</span>
+        <span> weighing </span>
         <span className="weight" test-data="weight">
           {`${weight} pounds`}
         </span>
 
-        <span>with a length of</span>
+        <span> with a length of </span>
         <span className="length" test-data="length">
           {`${length} inches`}
         </span>

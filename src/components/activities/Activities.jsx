@@ -21,7 +21,7 @@ class Activities extends React.Component {
     ) : (
       <ul className="container">
         {activities.map(activity => (
-          <li key={activity.id} className="card text-left">
+          <li key={activity.id} className="card activity text-left">
             <ActivitiesItem {...activity} />
           </li>
         ))}
