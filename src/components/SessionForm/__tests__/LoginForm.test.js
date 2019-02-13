@@ -43,7 +43,7 @@ describe('LoginForm', () => {
 
   it('should have a button to login', () => {
     expect(wrapper.hasMatchingElement(
-      <button type="submit" data-test="button" />,
+      <button type="submit" data-test="login" />,
     )).toBe(true);
   });
 
