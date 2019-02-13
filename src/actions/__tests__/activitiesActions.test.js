@@ -2,12 +2,12 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
 import mockAxios from 'axios';
-import { mockActivities } from '../__mocks__/mockActivities';
+import { mockActivities } from '../../__mocks__/mockActivities';
 import {
   FETCH_ACTIVITIES_SUCCESS,
   fetchActivitiesSuccess,
   fetchActivities,
-} from './activitiesActions';
+} from '../activitiesActions';
 
 const payload = mockActivities;
 const expectedAction = {

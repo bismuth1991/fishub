@@ -1,5 +1,5 @@
-import { ADD_BAIT } from '../actions/tackleBoxActions';
-import tackleBoxReducer from './tackleBoxReducer';
+import { ADD_BAIT } from '../../actions/tackleBoxActions';
+import tackleBoxReducer from '../tackleBoxReducer';
 
 describe('tackleBox reducer', () => {
   it('should returns the initial state', () => {

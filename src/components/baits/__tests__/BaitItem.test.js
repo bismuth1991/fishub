@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import { HashRouter } from 'react-router-dom';
-import BaitItem from './BaitItem';
+import BaitItem from '../BaitItem';
 
 describe('BaitItem', () => {
   const addToTackleBox = jest.fn();

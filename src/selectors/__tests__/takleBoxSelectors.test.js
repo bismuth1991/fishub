@@ -2,7 +2,7 @@ import {
   getTackleBox,
   getBaitsInTackleBox,
   isTackleBoxEmpty,
-} from './tackleBoxSelectors';
+} from '../tackleBoxSelectors';
 
 describe('tackleBox selectors', () => {
   const tackleBox = [1, 4];

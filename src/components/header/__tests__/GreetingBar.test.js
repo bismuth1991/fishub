@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { HashRouter, Link } from 'react-router-dom';
 
-import GreetingBar from './GreetingBar';
+import GreetingBar from '../GreetingBar';
 
 describe('GreetingBar', () => {
   const logOut = jest.fn();

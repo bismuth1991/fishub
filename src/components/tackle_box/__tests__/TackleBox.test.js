@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { TackleBox } from './TackleBox';
-import LeftPanel from './LeftPanel';
+import { TackleBox } from '../TackleBox';
+import LeftPanel from '../LeftPanel';
 
 describe('TackleBox', () => {
-  jest.mock('./LeftPanel', () => 'LeftPanel');
+  jest.mock('../LeftPanel', () => 'LeftPanel');
   const props = {
     baits: [
       {

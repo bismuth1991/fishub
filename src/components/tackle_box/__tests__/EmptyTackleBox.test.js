@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { HashRouter } from 'react-router-dom';
 
-import EmptyTackleBox from './EmptyTackleBox';
+import EmptyTackleBox from '../EmptyTackleBox';
 
 describe('EmptyTackleBox', () => {
   let wrapper;

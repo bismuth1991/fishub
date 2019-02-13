@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { mockActivitiesArray } from '../../__mocks__/mockActivities';
-import Activities from './Activities';
+import { mockActivitiesArray } from '../../../__mocks__/mockActivities';
+import Activities from '../Activities';
 
 describe('Activities', () => {
-  jest.mock('./ActivitiesItem', () => 'ActivitiesItem');
+  jest.mock('../ActivitiesItem', () => 'ActivitiesItem');
   const fetchActivities = jest.fn();
   const props = {
     activities: mockActivitiesArray,

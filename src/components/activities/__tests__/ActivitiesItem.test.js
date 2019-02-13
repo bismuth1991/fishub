@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import formatDate from '../../utils/formatDate';
-import ActivitiesItem from './ActivitiesItem';
+import formatDate from '../../../utils/formatDate';
+import ActivitiesItem from '../ActivitiesItem';
 
 describe('ActivitiesItem', () => {
   const props = {

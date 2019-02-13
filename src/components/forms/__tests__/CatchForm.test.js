@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import CatchForm from './CatchForm';
+import CatchForm from '../CatchForm';
 
 describe('CatchForm', () => {
   const logCatch = jest.fn();

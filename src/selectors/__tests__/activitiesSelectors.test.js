@@ -1,5 +1,5 @@
-import { getActivities } from './activitiesSelectors';
-import { mockActivities, mockActivitiesArray } from '../__mocks__/mockActivities';
+import { getActivities } from '../activitiesSelectors';
+import { mockActivities, mockActivitiesArray } from '../../__mocks__/mockActivities';
 
 describe('getActivities', () => {
   const mockState = {

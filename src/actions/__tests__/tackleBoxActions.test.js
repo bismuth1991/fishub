@@ -1,7 +1,7 @@
 import {
   ADD_BAIT,
   addBait,
-} from './tackleBoxActions';
+} from '../tackleBoxActions';
 
 describe('tackleBoxActions', () => {
   it('should create an action to add bait', () => {

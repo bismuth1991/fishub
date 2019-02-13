@@ -1,8 +1,8 @@
 import deepFreeze from 'deep-freeze';
 
-import { FETCH_BAITS_SUCCESS } from '../actions/baitsActions';
-import baitsReducer from './baitsReducer';
-import { mockBaits } from '../__mocks__/mockBaits';
+import { FETCH_BAITS_SUCCESS } from '../../actions/baitsActions';
+import baitsReducer from '../baitsReducer';
+import { mockBaits } from '../../__mocks__/mockBaits';
 
 describe('baits reducer', () => {
   it('should return the initial state', () => {

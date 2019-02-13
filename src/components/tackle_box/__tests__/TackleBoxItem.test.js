@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import TackleBoxItem from './TackleBoxItem';
+import TackleBoxItem from '../TackleBoxItem';
 
 describe('TackleBoxItem', () => {
   const props = {

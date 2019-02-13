@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LeftPanelItem from './LeftPanelItem';
+import LeftPanelItem from '../LeftPanelItem';
 
 describe('LeftPanelItem', () => {
   const props = {

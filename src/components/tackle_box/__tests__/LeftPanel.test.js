@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LeftPanel from './LeftPanel';
+import LeftPanel from '../LeftPanel';
 
 describe('LeftPanel', () => {
-  jest.mock('./LeftPanelItem', () => 'LeftPanelItem');
+  jest.mock('../LeftPanelItem', () => 'LeftPanelItem');
   const switchBait = jest.fn();
   const props = {
     baits: [
