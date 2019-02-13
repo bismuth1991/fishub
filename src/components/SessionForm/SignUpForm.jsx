@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { func, bool, string } from 'prop-types';
+import { func, bool, string, arrayOf } from 'prop-types';
 import { Link } from 'react-router-dom';
+import Errors from '../CatchForm/Errors';
 
-const LoginForm = ({ logIn, hasError, error }) => {
+const SignUpForm = ({ signUp, hasErrors, errors }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    logIn({
+    signUp({
       user: {
         username,
         password,
@@ -21,15 +22,13 @@ const LoginForm = ({ logIn, hasError, error }) => {
     <div className="container">
       <div className="row">
         <div className="col-md-4 offset-md-4">
-          <h2 className="text-center">Log In</h2>
+          <h2 className="text-center">Sign Up</h2>
 
           <h5 className="text-center">
-            <Link to="/signup">Need an account?</Link>
+            <Link to="/login">Have an account?</Link>
           </h5>
 
-          {hasError
-            ? <p className="error">{error}</p>
-            : null}
+          <Errors hasErrors={hasErrors} errors={errors} />
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -53,10 +52,10 @@ const LoginForm = ({ logIn, hasError, error }) => {
             </div>
             <button
               type="submit"
-              data-test="login"
+              data-test="signup"
               className="btn btn-info btn-block"
             >
-              Log In
+              Sign Up
             </button>
           </form>
         </div>
@@ -65,14 +64,14 @@ const LoginForm = ({ logIn, hasError, error }) => {
   );
 };
 
-LoginForm.defaultProps = {
-  error: null,
+SignUpForm.defaultProps = {
+  errors: null,
 };
 
-LoginForm.propTypes = {
-  logIn: func.isRequired,
-  hasError: bool.isRequired,
-  error: string,
+SignUpForm.propTypes = {
+  signUp: func.isRequired,
+  hasErrors: bool.isRequired,
+  errors: arrayOf(string),
 };
 
-export default LoginForm;
+export default SignUpForm;

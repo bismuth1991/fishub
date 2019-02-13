@@ -6,6 +6,7 @@ import BaitsContainer from './baits/BaitsContainer';
 import TackleBoxContainer from './tackle_box/TackleBox';
 import ActivitiesContainer from './activities/ActivitiesContainer';
 import LoginForm from './SessionForm/LoginForm';
+import SignUpForm from './SessionForm/SignUpForm';
 
 const App = () => (
   <div id="app">
@@ -17,6 +18,7 @@ const App = () => (
         <Route path="/tackle-box" component={TackleBoxContainer} />
         <Route path="/activities" component={ActivitiesContainer} />
         <Route path="/login" component={LoginForm} />
+        <Route path="/signup" component={SignUpForm} />
       </Switch>
     </div>
   </div>

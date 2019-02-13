@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { HashRouter } from 'react-router-dom';
 
 import SignUpForm from '../SignUpForm';
 
@@ -7,6 +8,8 @@ describe('SignUpForm', () => {
   const signUp = jest.fn();
   const props = {
     signUp,
+    hasErrors: false,
+    errors: null,
   };
 
   const simulateUsernameInput = (wrapper, value) => {
@@ -22,7 +25,7 @@ describe('SignUpForm', () => {
 
   let wrapper;
   beforeEach(() => {
-    wrapper = mount(<SignUpForm {...props} />);
+    wrapper = mount(<HashRouter><SignUpForm {...props} /></HashRouter>);
   });
 
   it('should render without crashing', () => {
@@ -70,7 +73,7 @@ describe('SignUpForm', () => {
 
   it('should display error message when appropriate', () => {
     wrapper.setProps({
-      children: <SignUpForm signUp={signUp} hasError error="Username cannot be blank" />,
+      children: <SignUpForm signUp={signUp} hasErrors errors={['Username cannot be blank']} />,
     });
 
     expect(wrapper.contains('Username cannot be blank')).toBe(true);
