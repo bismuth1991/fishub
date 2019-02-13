@@ -6,7 +6,9 @@ const LoginForm = ({ logIn, hasError, error }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     logIn({
       user: {
         username,
@@ -64,7 +66,7 @@ const LoginForm = ({ logIn, hasError, error }) => {
 };
 
 LoginForm.defaultProps = {
-  error: undefined,
+  error: null,
 };
 
 LoginForm.propTypes = {
