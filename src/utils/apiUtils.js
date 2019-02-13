@@ -41,14 +41,14 @@ export default {
   fetchActivities() {
     return axios.get('/activity');
   },
-  createSession(username, password) {
-    return axios.post('/session', { username, password });
+  createSession(userData) {
+    return axios.post('/session', userData);
   },
   deleteSession() {
     return axios.delete('/session', {});
   },
-  createUser(username, password) {
-    return axios.post('/users', { username, password });
+  createUser(userData) {
+    return axios.post('/users', userData);
   },
 };
 

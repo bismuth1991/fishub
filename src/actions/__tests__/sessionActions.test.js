@@ -24,8 +24,10 @@ describe('logIn', () => {
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares)({});
   const userData = {
-    username: 'Bismuth',
-    password: 'password',
+    user: {
+      username: 'Bismuth',
+      password: 'password',
+    },
   };
 
   describe('success', () => {
