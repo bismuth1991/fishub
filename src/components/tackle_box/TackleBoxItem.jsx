@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
-import CatchForm from '../forms/CatchForm';
+import CatchForm from '../CatchForm/CatchForm';
 
 const TackleBoxItem = ({
   bait: {
