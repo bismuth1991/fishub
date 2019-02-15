@@ -10,7 +10,7 @@ const LoginForm = ({ logIn, hasError, error }) => {
     e.preventDefault();
 
     logIn({
-      user: {
+      session: {
         username,
         password,
       },

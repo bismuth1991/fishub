@@ -5,7 +5,7 @@ import Header from './header/Header';
 import BaitsContainer from './baits/BaitsContainer';
 import TackleBoxContainer from './tackle_box/TackleBox';
 import ActivitiesContainer from './activities/ActivitiesContainer';
-import LoginForm from './SessionForm/LoginForm';
+import LoginFormContainer from './SessionForm/LoginFormContainer';
 import SignUpForm from './SessionForm/SignUpForm';
 
 const App = () => (
@@ -17,7 +17,7 @@ const App = () => (
         <Route path="/baits" component={BaitsContainer} />
         <Route path="/tackle-box" component={TackleBoxContainer} />
         <Route path="/activities" component={ActivitiesContainer} />
-        <Route path="/login" component={LoginForm} />
+        <Route path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignUpForm} />
       </Switch>
     </div>

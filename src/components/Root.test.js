@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from 'redux-mock-store';
 
-import Root from './root';
+import Root from './Root';
 
 xit('renders without crashing', () => {
   const middlewares = [];
